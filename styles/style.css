@@ -13,7 +13,100 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-main), sans-serif;
+  font-weight: var(--font-weight-text);
+  font-variation-settings: "wght" var(--font-weight-text);
+ 
+
+}
+
+.header {
+  width: clamp(347px, 48vw, 696px);
+  border: 2px var(--mainColor) solid;
+  margin: 100px auto;
+  background-color: var(--background-main-color);
+  padding: 
+        clamp(7.5rem, 6.25rem + 0.7813vw, 8rem)
+        clamp(0.875rem, 0.75rem + 0.52vw, 7.53rem); 
+  position: relative;
+  
+}
+
+.header__background {
   background-image: repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(180deg, #d3d3d3 0 2px, transparent 2px 4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 960px;
+  z-index: -1;
+}
+
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-accent), sans-serif;
+}
+
+.logo__html {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  margin-bottom: 20px;
+  line-height: 65px;
+  font-family: var(--font-accent), sans-serif;
+  
+}
+
+.logo__text {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  line-height: 23px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(347px, 48vw, 696px); /* Теперь контент резиновый */
+  max-width: 100%; /* Чтобы не вылезал за границы */
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.post {
+  border: 2px var(--mainColor) solid;
+  width: 100%
+}
+
+.post__image-container {
+  position: relative;
+}
+
+.post__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+}
+
+.post__title {
+  font-variation-settings: "wght" var(--font-weight-title);
+  background-color: var(--post-background-color);
+
+}
+
+.logo__html-small {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  -webkit-text-stroke: 2px white;
+  font-size: 2rem;
+
+
+}
+
+.text__container {
+  margin: 25px 25px 88px 25px;
 }
 
 
