@@ -26,10 +26,10 @@
   margin: 100px auto;
   background-color: var(--background-main-color);
   padding: 
-        clamp(7.5rem, 6.25rem + 0.7813vw, 8rem)
-        clamp(0.875rem, 0.75rem + 0.52vw, 7.53rem); 
+  clamp(8rem, 7.5rem + 1vw, 8rem) /* 128px сверху и снизу */
+  clamp(7.53rem, 7.53rem + 0.1vw, 7.53rem); /* 120.5px слева и справа */
   position: relative;
-  
+
 }
 
 .header__background {
@@ -61,6 +61,7 @@
 .logo__text {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 23px;
+  text-transform: uppercase;
 }
 
 .content {
@@ -75,7 +76,8 @@
 
 .post {
   border: 2px var(--mainColor) solid;
-  width: 100%
+  width: 100%;
+
 }
 
 .post__image-container {
@@ -92,15 +94,19 @@
 .post__title {
   font-variation-settings: "wght" var(--font-weight-title);
   background-color: var(--post-background-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.78px;
+  padding: 3px 10px;
 
 }
 
 .logo__html-small {
   position: absolute;
   right: 20px;
-  top: 25px;
+  top: 0;
   -webkit-text-stroke: 2px white;
-  font-size: 2rem;
+  font-size: 0.875rem;
 
 
 }
