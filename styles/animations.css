@@ -9,3 +9,82 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+
+
+/* Файл для анимаций */
+
+/* --- Анимация лайка --- */
+@keyframes like-heart-fill {
+  0% {
+    fill: transparent;
+  }
+  50% {
+    fill: var(--mainColor);
+  }
+  100% {
+    fill: red;
+  }
+}
+
+@keyframes like-heart-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.like-icon.is-liked {
+  animation: like-heart-fill 0.3s ease-in-out, like-heart-scale 0.3s ease-in-out;
+}
+
+/* --- Анимация кнопки сохранения --- */
+@keyframes button-hover {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: var(--mainColor);
+    color: #fff;
+  }
+}
+
+.save_button:hover {
+  animation: button-hover 0.3s ease-in-out;
+}
+
+/* --- Анимация модального окна --- */
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modal-fade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.dialog[open] {
+  animation: modal-fade-in 0.3s ease-out;
+}
+
+.dialog[closing] {
+  animation: modal-fade-out 0.3s ease-in;
+}

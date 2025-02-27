@@ -3,14 +3,17 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Variable.woff2") format("truetype");
-  font-weight: 100 900; /* Вариативный диапазон от 100 до 900 */
+  src: local('Inter-Variable'),
+  url('Inter-Variable.woff2') format('woff2 supports variations'),
+  url('Inter-Variable.woff2') format('woff2-variations');
+  font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PressStart2P";
-  src: url("../fonts/PressStart2P-Regular.woff") format("woff");
+  src: local('PressStart2P-Regular'),
+  url("../fonts/PressStart2P-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
