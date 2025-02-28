@@ -4,7 +4,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -22,8 +21,6 @@
   background-image: var(--background-gradient);
   background-attachment: fixed;
   background-size: cover;
-
-
 }
 
 .header {
@@ -42,20 +39,6 @@
     padding-block: 100px;
   }
 }
-
-
-/*
-
-.background-gradient {
-  
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 960px;
-  z-index: -1;
-}
-*/
 
 .logo {
   display: flex;
@@ -102,9 +85,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
-  
 }
 
 .post__image {
@@ -148,23 +128,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .post__title {
   font-variation-settings: "wght" var(--font-weight-title);
   background-color: var(--post-background-color);
@@ -174,18 +137,7 @@
   padding-bottom: 4px;
   font-size: 1.125rem;
 }
-/*
-.logo__html-small {
-  position: absolute;
-  right: 25px;
-  top: 1px;
-  text-shadow: 1px 1px var(--stroke-color);
-  font-size: 0.875rem;
-  mix-blend-mode: hard-light;
-  z-index: 1;
-  opacity: 0.5;
-}
-*/
+
 
 .post__label {
   font-family: var(--font-accent), sans-serif;
@@ -216,8 +168,6 @@
 }
 
 
-
-
 .text__container {
   margin: 25px;
   display: flex;
@@ -227,8 +177,6 @@
   line-height: 21px;
   letter-spacing: 0%;
   background-color: #fff;
-  
-
 }
 
 .like-container {
@@ -254,11 +202,55 @@
   box-shadow: 1px 1px 0 #000;
 }
 
-.button:hover {
-  color: #fff;
-  background-color: #000;
+.animated-button {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  background-color: white;
+  color: black;
 }
 
+
+/* ниже делаем цвет белмы при наведении */
+.animated-button .button__text {
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s ease-in-out;
+  
+}
+
+.animated-button:hover .button__text {
+  color: white;
+}
+
+.animated-button:hover .button_icon {
+  filter: invert(1);
+}
+
+.animated-button .button_icon {
+  transition: filter 0.5s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+/*делаем плавную наводку  черным цветом */
+.animated-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(0);
+  background-color: #000;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+/*делаем плавную наводку  черным цветом */
+.animated-button:hover::before {
+  transform: translateX(0);
+}
 
 .card__icon-button {
   border: none;
@@ -267,12 +259,23 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  width: 38px;
+  height: 38px;
+}
+
+.card__icon-button:focus {
+  outline: none;
 }
 
 .like-icon {
   transition: 0.5s ease-in-out;
 }
 
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
+}
 
 .card__like-button {
   min-inline-size: 130px;
@@ -323,7 +326,6 @@
 }
 
 
-
 .button_icon {
   width: 21px;
   height: 21px;
@@ -335,7 +337,6 @@
     height: 28px;
   }
 }
-
 
 
 .modal {
@@ -352,16 +353,12 @@
   max-width: 353px;
 }
 
-
 @media (width <= 375px) {
   .modal[open] {
     max-width: 342px;
     padding: 42px;
   }
 }
-
-
-
 
 
 .modal[open]::backdrop {
