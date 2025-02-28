@@ -139,14 +139,10 @@
   mix-blend-mode: hard-light;
 }
 
-@supports (
-  (text-stroke: 1px var(--stroke-color)) or
-    (-webkit-text-stroke: 1px var(--stroke-color))
-) {
+@supports (-webkit-text-stroke: 1px var(--stroke-color)) {
   .post__label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--stroke-color);
-    text-stroke: 1px var(--stroke-color);
   }
 }
 
@@ -164,7 +160,7 @@
   margin: 25px;
   font-size: 1.125rem;
   line-height: 21px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   background-color: #fff;
 }
 
