@@ -10,16 +10,16 @@
 
 */
 
-@keyframes scale {
+@keyframes heartScaleUp {
   0% {
-    scale: 1;
+    transform: scale(1);
   }
   100% {
-    scale: 1.25;
+    transform: scale(1.25);
   }
 }
 
-@keyframes sparks {
+@keyframes sparkAppears {
   0% {
     opacity: 0;
   }
@@ -40,7 +40,7 @@
 
 .core {
   fill: transparent;
-  transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .main-body {
@@ -57,44 +57,45 @@
 }
 
 .button-heart:hover .core {
-  fill: var(--border-heart-color);
+  fill: var(--color-heart-border);
   transition: fill 0.3s linear;
 }
 
 .button-heart:hover .main-body {
-  fill: var(--border-heart-color);
+  fill: var(--color-heart-border);
   transition: fill 0.3s linear 0.05s;
 }
 
 .button-heart:active .main-body {
-  fill: var(--heart-color);
-  transition: fill 0.3 linear 0.05s;
+  fill: var(--color-heart);
+  transition: fill 0.3s linear 0.05s;
 }
 
 .button-heart:active .core {
-  fill: var(--heart-color);
-  transition: fill 0.3 linear;
+  fill: var(--color-heart);
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--heart-color);
-  transition: fill 0.3 linear 0.06s;
+  fill: var(--color-heart);
+  transition: fill 0.3s linear 0.06s;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--heart-color);
-  transition: fill 0.3 linear 0.05s;
+  fill: var(--color-heart);
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--heart-color);
-  transition: fill 0.3 linear;
+  fill: var(--color-heart);
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .heart {
-  animation: scale 0.3s ease-in 0.1s 1;
+  animation: heartScaleUp 0.3s ease-in 0.1s 1;
+  transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks 0.3s ease-in 0.3s 1;
+  animation: sparkAppears 0.3s ease-in 0.3s 1;
 }

@@ -2,22 +2,22 @@
 
 
 :root {
-  --mainColor: #000;
-  --post-background-color: #fff;
-  --background-main-color: #fff;
-  --font-main: "Inter";
-  --font-accent: "PressStart2P";
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --color-primary-bg: #fff;
+  --color-primary-label: #fff;
+  --color-heart: #FF0000;
+  --color-heart-border: #000;
+  --font-primary: "Inter", Arial, sans-serif;
+  --font-secondary: "PressStart2P", Pixeloid Sans, fantasy;
   --font-weight-text: 400;
   --font-weight-title: 700;
-  --stroke-color: rgba(255, 255, 255);
   --header-title-font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
   --header-subtitle-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --header-padding-inline: clamp(0.875rem, -6.8053rem + 32.7692vw, 7.53125rem);
   --header-padding-block: clamp(7.5rem, 6.9231rem + 2.4615vw, 8rem);
   --content-width: clamp(375px, 375px + 0.305 * (100vw - 375px), 700px);
   --background-gradient: repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(180deg, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a);
-  --heart-color: #FF0000;
-  --border-heart-color: #000;
 }
 
 
