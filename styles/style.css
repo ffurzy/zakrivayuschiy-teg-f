@@ -33,7 +33,7 @@
   background-color: var(--color-primary-bg);
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .header {
     padding-inline: 0;
     padding-block: 120px;
@@ -46,7 +46,7 @@
   line-height: 65px;
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .header__name {
     line-height: 49px;
   }
@@ -57,7 +57,7 @@
   line-height: 23px;
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .header__description {
     line-height: 14px;
   }
@@ -263,11 +263,10 @@ header a {
 
 .button__text {
   color: var(--color-secondary);
-  mix-blend-mode: difference;
   font-family: var(--font-secondary), fantasy;
   font-size: 0.875rem;
   line-height: 12.6px;
-  
+  mix-blend-mode: difference;
 }
 
 .save__section {
@@ -276,33 +275,21 @@ header a {
   padding-bottom: 100px;
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .save__section {
     width: 375px;
   }
 }
 
-.button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px var(--color-primary) solid;
-  overflow: hidden;
-  color: var(--color-primary);
-  background-color: white;
-  cursor: pointer;
-}
-
-.save__section > .button {
+.save__section>.button {
   flex-direction: row;
   gap: 6px;
   min-inline-size: 335px;
   min-block-size: 55px;
 }
 
-@media (width <= 375px) {
-  .save__section > .button {
+@media (width <=375px) {
+  .save__section>.button {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 8px;
@@ -314,15 +301,11 @@ header a {
 .button_icon {
   width: 21px;
   height: 21px;
-  color: white;
+  fill: white;
   mix-blend-mode: difference;
-  
- 
-  
-  
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .button_icon {
     width: 28px;
     height: 28px;
@@ -342,7 +325,7 @@ header a {
   display: flex;
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .modal[open] {
     min-width: 341px;
   }
@@ -364,7 +347,7 @@ body:has(.modal[open]) {
   padding-bottom: 30px;
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .modal__content {
     width: 257px;
   }
@@ -384,7 +367,7 @@ body:has(.modal[open]) {
   height: 39px;
 }
 
-.modal > .button {
+.modal>.button {
   width: 100%;
   max-width: 293px;
   min-height: 38px;
@@ -393,8 +376,8 @@ body:has(.modal[open]) {
   cursor: pointer;
 }
 
-@media (width <= 375px) {
-  .modal > .button {
+@media (width <=375px) {
+  .modal>.button {
     align-self: center;
     width: 257px;
   }
