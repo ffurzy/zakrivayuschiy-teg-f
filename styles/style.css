@@ -196,10 +196,9 @@ header a {
   border: 2px var(--color-primary) solid;
   overflow: hidden;
   color: var(--color-primary);
-  background: none;
   background-color: var(--color-primary-bg);
-  transition: color 0.5s ease-in-out;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .button:focus {
